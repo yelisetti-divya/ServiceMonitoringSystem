@@ -16,6 +16,7 @@ public class MetricsEntity {
 
     public MetricsEntity() {}
 
+    // Getters & Setters
     public Long getId() { return id; }
     public Long getServiceId() { return serviceId; }
     public int getResponseTime() { return responseTime; }

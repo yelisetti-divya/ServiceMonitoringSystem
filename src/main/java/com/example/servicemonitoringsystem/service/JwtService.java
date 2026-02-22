@@ -1,4 +1,4 @@
-package com.example.servicemonitoringsystem.security;
+package com.example.servicemonitoringsystem.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
