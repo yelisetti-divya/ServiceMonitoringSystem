@@ -1,20 +1,11 @@
-FROM maven:3.9.6-eclipse-temurin-17
+FROM maven:3.9.9-eclipse-temurin-21
 
 WORKDIR /app
 
-# Copy pom.xml first (for dependency caching)
-COPY pom.xml .
+COPY . .
 
-RUN mvn dependency:go-offline
-
-# Copy source code
-COPY src ./src
-
-# Build the project
 RUN mvn clean package -DskipTests
 
-# Render requires port 8080
 EXPOSE 8080
 
-# Run Spring Boot jar
-CMD ["java","-jar","target/*.jar"]
+CMD ["java","-jar","target/demo-0.0.1-SNAPSHOT.jar"]
